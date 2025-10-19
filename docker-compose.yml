@@ -7,7 +7,7 @@ services:
     ports:
     - "8080:80"
     volumes:
-    - .:/var/www/html
+    - ./:/var/www/html
     depends_on:
     - mysql
     links:
@@ -27,6 +27,7 @@ services:
 
     volumes:
     - mysql:/var/dockervolumes
+    - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
 
 volumes:
   mysql:

@@ -1,7 +1,8 @@
 FROM php:7.3-apache
 
 # Copy application files to contaier
-COPY . /var/www/html/
+COPY lab /var/www/html/
+
 
 # Copy PHP config file to container
 COPY .docker/php/php.ini /usr/local/etc/php/
